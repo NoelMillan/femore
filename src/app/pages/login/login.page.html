@@ -1,0 +1,30 @@
+<ion-content>
+  <body>
+  <div class="container">
+    <div class="caja-grande ion-text-center">
+      <h1 class="letra">Log In</h1>
+    </div>
+    <ion-item mode="ios">
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item mode="ios">
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <div class="ion-text-center">
+      <button class="caja-chica ion-text-center" (click)="login()">
+        <h5 class="letra">Let me in</h5>
+      </button>
+    </div>
+    <div class="container-sub ion-padding-top">
+      <span class="letra-chica ion-text-left ion-padding-end">
+        Not registered?<br><strong><a class="letra-register" (click)="goRegister()"><i>Create an account</i></a></strong>
+      </span>
+      <span class="letra-chica ion-text-end">
+        <a class="letra-recover">Forgot your password?</a>
+      </span>
+    </div>
+  </div>
+</body>
+</ion-content>

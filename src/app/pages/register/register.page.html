@@ -1,0 +1,40 @@
+<ion-content>
+  <body>
+  <div class="container">
+    <div class="caja-grande ion-text-center">
+      <h1 class="letra">Register</h1>
+    </div>
+    <div class="container__name">
+      <ion-item id="first_box" mode="ios">
+        <ion-label position="stacked">First Name</ion-label>
+        <ion-input [(ngModel)]="firstName"></ion-input>
+      </ion-item>
+      <ion-item mode="ios">
+        <ion-label position="stacked">Last Name</ion-label>
+        <ion-input [(ngModel)]="lastName"></ion-input>
+      </ion-item>
+    </div>
+    <ion-item mode="ios">
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item mode="ios">
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item mode="md" class="ion-padding-start">
+      <ion-checkbox id="check" (click)="termsChecked = !termsChecked"></ion-checkbox>
+      <span class="ion-padding-start letra-chica">I accept the <strong><a class="letra-register"><i>terms of use</i></a></strong></span>
+    </ion-item>
+    <div class="ion-text-center">
+      <button [disabled]="!termsChecked" type="submit" (click)="register()" class="caja-chica ion-text-center">
+        <h5 class="letra">Sign Up</h5>
+      </button>
+      <br>
+      <span class="letra-chica">
+        Already registered?&nbsp;<strong><a class="letra-register" (click)="goLogin()"><i>Log in now!</i></a></strong>
+      </span>
+    </div>
+  </div>
+</body>
+</ion-content>

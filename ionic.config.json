@@ -1,0 +1,7 @@
+{
+  "name": "femore",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "femore-23dbd": {
+      "hosting": {
+        "app": [
+          "femore-23dbd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "femore-23dbd"
+  }
+}
