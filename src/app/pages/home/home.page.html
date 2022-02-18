@@ -1,0 +1,59 @@
+<ion-content>
+  <body>
+    <app-nav-bar></app-nav-bar>
+    <div class="caja-mediana ion-text-center">
+      <div class="caja-mediana__item">
+        <label>
+          <input type="checkbox" [(ngModel)]="centerPressed">
+          <div class="menu">{{locationPressed}}</div>
+        </label>
+      </div>
+    </div>
+    <div [@fadeInOnEnter] [@fadeOutOnLeave] *ngIf="centerPressed" class="caja-mediana__secondary ion-text-center">
+      <ion-segment scrollable mode="md">
+        <ng-container *ngFor="let l of locations">
+        <ion-segment-button (click)="locationPressed = l.name">
+          <div class="caja-mediana__item-secondary">
+            <span>{{l.name}}</span>
+            <div></div>
+          </div>
+        </ion-segment-button>
+        </ng-container>
+      </ion-segment>
+    </div>
+    <div [@fadeInOnEnter] [@fadeOutOnLeave] *ngIf="!centerPressed" class="container">
+      <ion-slides [options]="option" class="ion-margin-top">
+        <ion-slide *ngFor="let c of centers">
+          <ion-card mode="ios">
+            <img src="{{c.img}}">
+            <p>{{c.name}}</p>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </div>
+      <!-- Rectángulo con vectores -->
+      <!-- <div class="footer__item"><img src="../../../assets/svg/barra-footer.svg"></div>
+      <div class="container-gap">
+        <div class="container-footer">
+          <div class="container-footer-gap">
+            <div class="container-footer__item">
+              <ion-icon name="man"></ion-icon>
+            </div>
+            <span>Male</span>
+          </div>
+          <div class="container-footer-gap">
+            <div class="container-footer__item segundo">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <span>10/07/21</span>
+          </div>
+          <div class="container-footer-gap">
+            <div class="container-footer__item">
+              <ion-icon name="call"></ion-icon>
+            </div>
+            <span>722651529</span>
+          </div>
+        </div>
+      </div> -->
+  </body>
+</ion-content>

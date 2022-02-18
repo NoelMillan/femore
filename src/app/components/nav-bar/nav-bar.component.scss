@@ -1,0 +1,54 @@
+.container{
+    margin-bottom: -50px;
+}
+.borde-l-back{
+    width: 100vw;
+    min-height: 100px;
+    background-color: #ECE9E6;
+    border-radius: 0px 0px 0px 0px;
+}
+.borde-l{
+    width: 100vw;
+    height: 100%;
+    min-height: 100px;
+    background: linear-gradient(90deg, #EC008C, #FC6767);
+    border-radius: 0px 0px 0px 40px;
+}
+.borde-r-back{
+    width: 100vw;
+    min-height: 80px;
+    background-color: #FC6767;
+}
+.borde-r{
+    width: 100vw;
+    min-height: 80px;
+    background-color: #ECE9E6;
+    border-radius: 0px 50px 0px 0px;
+}
+ion-fab{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    ion-fab-button{
+        --background: linear-gradient(45deg, #FC6767, #EC008C);
+        --background-activated: linear-gradient(45deg, #FC6767, #EC008C);
+        --background-hover: linear-gradient(45deg, #FC6767, #EC008C);
+        --close-icon-font-size: 30px;
+        --box-shadow: #00000054 4px 4px 5px;
+        width: 65px;
+        height: 65px;
+    }
+}
+
+ion-fab-list ion-fab-button{
+    transition: .5s;
+    --background: linear-gradient(90deg, #FC6767, #EC008C);
+    --background-activated: linear-gradient(90deg, #FC6767, #EC008C);
+    --background-hover: linear-gradient(90deg, #FC6767, #EC008C);
+    --close-icon-font-size: 30px;
+    width: 65px;
+    height: 65px;
+}
+ion-fab-list ion-fab-button:first-child{
+    margin-top: 10px;
+}

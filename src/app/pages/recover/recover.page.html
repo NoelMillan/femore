@@ -1,0 +1,26 @@
+<ion-content>
+  <body>
+    <div class="container">
+      <div class="caja-grande ion-text-center">
+        <h1 class="letra">Recover</h1>
+      </div>
+      <ion-item mode="ios">
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <div class="ion-text-center ion-padding-top">
+        <button [disabled]="isShowed" (click)="resetPassword(); showMessage()" class="caja-media ion-text-center">
+          <h5 class="letra">Recover your password</h5>
+        </button>
+      </div>
+      <div class="container__item">
+        <button class="caja-chica ion-text-center" (click)="goLogin()">
+          <h5 class="letra">Log in</h5>
+        </button>
+        <button class="caja-chica ion-text-center" (click)="goRegister()">
+          <h5 class="letra">Register</h5>
+        </button>
+      </div>
+    </div>
+  </body>
+</ion-content>

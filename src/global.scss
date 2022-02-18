@@ -24,3 +24,9 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.app-toast{
+    text-align: center;
+    font-size: 16px;
+    --background: linear-gradient(90deg, #CC2B5E, #753A88);
+}

@@ -9,6 +9,7 @@ body{
   }
   .container__name{
       display: flex;
+      justify-content: space-between;
       #first_box{
           margin-right: 20px;
       }

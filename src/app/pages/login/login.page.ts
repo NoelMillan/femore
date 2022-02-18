@@ -31,4 +31,8 @@ export class LoginPage implements OnInit {
     this.router.navigateByUrl("/register")
   }
 
+  goRecover(){
+    this.router.navigateByUrl("/recover")
+  }
+
 }

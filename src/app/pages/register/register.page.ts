@@ -20,14 +20,14 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
 
-  register(){
-    this.authService.register(this.email, this.password)
-      .then(
-        () => /*this.router.navigateByUrl('/list'),*/console.log("ok"),
-        error => {
-          console.log("error")
-        }
-      )
+  async register(){
+    const connectionSuccess = await this.authService.register(this.email, this.password)
+
+    if (connectionSuccess){
+      this.goLogin();
+    } else{
+      console.log("error")
+    }
   }
 
   goLogin(){
