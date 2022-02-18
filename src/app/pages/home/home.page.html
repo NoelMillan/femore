@@ -9,7 +9,7 @@
         </label>
       </div>
     </div>
-    <div [@fadeInOnEnter] [@fadeOutOnLeave] *ngIf="centerPressed" class="caja-mediana__secondary ion-text-center">
+    <div *ngIf="centerPressed" class="caja-mediana__secondary ion-text-center">
       <ion-segment scrollable mode="md">
         <ng-container *ngFor="let l of locations">
         <ion-segment-button (click)="locationPressed = l.name">
@@ -21,7 +21,7 @@
         </ng-container>
       </ion-segment>
     </div>
-    <div [@fadeInOnEnter] [@fadeOutOnLeave] *ngIf="!centerPressed" class="container">
+    <div *ngIf="!centerPressed" class="container">
       <ion-slides [options]="option" class="ion-margin-top">
         <ion-slide *ngFor="let c of centers">
           <ion-card mode="ios">
@@ -55,5 +55,6 @@
           </div>
         </div>
       </div> -->
+      <app-footer-bar></app-footer-bar>
   </body>
 </ion-content>

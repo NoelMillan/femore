@@ -1,0 +1,113 @@
+body{
+    background: #ECE9E6;
+    color: black;
+}
+.nav-bar{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+.footer{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+}
+.nav-bar__text{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.nav-bar__list{
+    position: fixed;
+    left: 0;
+    z-index: 2;
+    margin: 25px 0px 0px 5px;
+}
+.container{
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+.container__item-up{
+    display: flex;
+    justify-content: space-around;
+}
+.container__item-up p{
+    font-size: 14px;
+    color: #969696bd
+}
+.caja-chica{
+    padding: .5rem;
+    max-width: 140px;
+    min-width: 140px;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.caja-chica.last-item{
+    max-width: 170px;
+    min-width: 170px;
+}
+ion-item{
+    --background: transparent;
+    --color: #F43379;
+    --border-color: rgba(255, 0, 200, 0.89);
+    --padding-start: 0px;
+  }
+.letra{
+    margin: 0;
+    color: #FF440A;
+}
+.letra-sub{
+    color: #F43379;
+    cursor: pointer;
+}
+.container__item-down{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.item-down__inline{
+    width: 100%;
+}
+.item-down__inline:nth-child(2){
+    margin-top: 20px;
+}
+.item-down__inline:nth-child(3){
+    margin-top: 20px;
+}
+.item-down__inline p{
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.letra-email{
+    word-break: break-all;
+}
+.item-down__inline > span > p > div{
+    font-size: 10px;
+    color: #969696bd;
+    cursor: pointer;
+}
+.container-gap{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 90px;
+    bottom: 0;
+}
+.caja-media{
+    margin: 25px auto 5px auto;
+    padding: .5rem;
+    width: 175px;
+    background: #F43379;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.caja-media > .letra{
+    color: white;
+}

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, getAuth, sendPasswordResetEmail, User, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -21,9 +21,9 @@ export class AuthService {
       )
   }
 
-  /*getCurrentUser(): User{
+  getCurrentUser(): User{
     return getAuth().currentUser
-  }*/
+  }
 
   logout(){
     signOut(this.auth)
