@@ -1,3 +1,5 @@
+import { PageService } from './../../services/page.service';
+import { Router } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
 import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,10 +12,15 @@ import { User } from 'src/app/models/user';
 })
 export class ProfileResetPage implements OnInit {
 
-  constructor(private userService: UserService, public authService: AuthService) {
+  constructor(private router: Router, private pageService: PageService) {
+    this.pageService.page = "Perfil"
   }
 
   ngOnInit() {
+  }
+
+  goProfile(){
+    this.router.navigateByUrl("/profile")
   }
 
 }
