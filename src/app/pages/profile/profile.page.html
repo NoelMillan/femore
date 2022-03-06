@@ -13,18 +13,18 @@
           <p class="disabled">Reviews</p>
         </div>
       </div>
-      <div class="container__item-down">
+      <div class="container__item-down" *ngFor="let u of user">
         <div class="item-down__inline">
           <div class="caja-chica">
             <h5 class="letra ion-text-center">Name</h5>
           </div>
-          <span><b>lol lol</b></span>
+          <span><b>{{u.firstName}} {{u.lastName}}</b></span>
         </div>
         <div class="item-down__inline">
           <div class="caja-chica">
             <h5 class="letra ion-text-center">Email</h5>
           </div>
-          <span><b>lol</b></span>
+          <span><b>{{u.email}}</b></span>
         </div>
         <div class="item-down__inline">
           <div class="caja-chica">

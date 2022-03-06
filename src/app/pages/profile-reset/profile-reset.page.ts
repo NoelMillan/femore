@@ -1,4 +1,7 @@
+import { AuthService } from './../../services/auth.service';
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-profile-reset',
@@ -7,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileResetPage implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService, public authService: AuthService) {
+  }
 
   ngOnInit() {
   }

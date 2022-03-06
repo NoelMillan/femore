@@ -1,4 +1,9 @@
+import { PageService } from './../../services/page.service';
+import { Observable } from 'rxjs';
+import { AuthService } from './../../services/auth.service';
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +12,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
-  
+  users: Observable<User[]>;
+  user: User[];
 
-  constructor() { }
+  constructor(private userService: UserService, public authService: AuthService, private pageService: PageService) {
+    this.userService.getUsers().subscribe(
+      data => this.user = data.filter(data => data.email == this.authService.getCurrentUser().email)
+    );
+    this.pageService.page = "Perfil"
+  }
 
   ngOnInit() {
   }

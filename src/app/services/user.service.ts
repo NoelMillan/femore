@@ -1,8 +1,8 @@
+import { User } from './../models/user';
 import { Injectable } from '@angular/core';
 import { Firestore } from '@angular/fire/firestore';
-import { User } from 'firebase/auth';
-import { addDoc, collection } from 'firebase/firestore';
-import { collectionData } from 'rxfire/firestore';
+import { addDoc, collection, doc } from 'firebase/firestore';
+import { collectionData, docData } from 'rxfire/firestore';
 import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
 
@@ -11,9 +11,7 @@ import { AuthService } from './auth.service';
 })
 export class UserService {
 
-  pathToUsers = `users/${this.auth.getCurrentUser().uid}/items`;
-
-  constructor(private firestore: Firestore, private auth: AuthService) { }
+  constructor(private firestore: Firestore, private auth: AuthService) {}
 
   public async addUser(user: User){
     await addDoc(collection(this.firestore, 'users'), user);

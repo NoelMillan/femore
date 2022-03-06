@@ -1,3 +1,4 @@
+import { PageService } from './../../services/page.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
@@ -12,7 +13,7 @@ export class LoginPage implements OnInit {
   email: string;
   password: string;
 
-  constructor(public authService: AuthService, private router: Router) { }
+  constructor(public authService: AuthService, private router: Router, private pageService: PageService) { }
 
   ngOnInit() {
   }
@@ -21,10 +22,15 @@ export class LoginPage implements OnInit {
     const connectionSuccess = await this.authService.login(this.email, this.password)
 
     if (connectionSuccess){
+      this.goProfile()
       console.log("ok")
     } else{
       console.log("error")
     }
+  }
+
+  goProfile(){
+    this.pageService.goProfile("Perfil")
   }
 
   goRegister(){

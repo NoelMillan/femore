@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   logout(){
-    signOut(this.auth)
+    signOut(this.auth);
   }
 
   register(email:string, password: string): Promise<boolean>{

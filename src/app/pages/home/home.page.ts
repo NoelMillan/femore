@@ -1,3 +1,4 @@
+import { PageService } from './../../services/page.service';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
@@ -43,7 +44,9 @@ export class HomePage implements OnInit {
     {location: "Almería", name: "Centro Comercial Oliveros", img: "../../../assets/images/olivero.jpg"},
   ]
 
-  constructor() { }
+  constructor(private pageService: PageService) {
+    this.pageService.page = "Centros"
+  }
 
   ngOnInit() {
   }

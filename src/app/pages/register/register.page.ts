@@ -1,3 +1,4 @@
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
@@ -15,7 +16,7 @@ export class RegisterPage implements OnInit {
   password: string;
   termsChecked: boolean;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, private userService: UserService) { }
 
   ngOnInit() {
   }
@@ -24,6 +25,7 @@ export class RegisterPage implements OnInit {
     const connectionSuccess = await this.authService.register(this.email, this.password)
 
     if (connectionSuccess){
+      this.addUser()
       this.goLogin();
     } else{
       console.log("error")
@@ -33,5 +35,18 @@ export class RegisterPage implements OnInit {
   goLogin(){
     this.router.navigateByUrl("/login")
   }
+
+  addUser() {
+    const user = {
+      userId: this.authService.getCurrentUser().uid,
+      firstName: this.firstName,
+      lastName: this.lastName,
+      email: this.email,
+      password: this.password,
+      centersVisited: 0,
+      reviews: 0,
+    }
+    this.userService.addUser(user);
+    }
 
 }
