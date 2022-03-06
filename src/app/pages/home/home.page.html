@@ -12,7 +12,7 @@
     <div *ngIf="centerPressed" class="caja-mediana__secondary ion-text-center">
       <ion-segment scrollable mode="md">
         <ng-container *ngFor="let l of locations">
-        <ion-segment-button (click)="locationPressed = l.name">
+        <ion-segment-button (click)="locationPressed = l.name; locationChanged()">
           <div class="caja-mediana__item-secondary">
             <span>{{l.name}}</span>
             <div></div>
@@ -23,8 +23,8 @@
     </div>
     <div *ngIf="!centerPressed" class="container">
       <ion-slides [options]="option" class="ion-margin-top">
-        <ion-slide *ngFor="let c of centers">
-          <ion-card mode="ios">
+        <ion-slide *ngFor="let c of centersChanged">
+          <ion-card mode="ios" (click)="goPlan(c.name)">
             <img src="{{c.img}}">
             <p>{{c.name}}</p>
           </ion-card>

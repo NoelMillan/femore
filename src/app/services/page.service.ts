@@ -10,18 +10,11 @@ export class PageService {
 
   constructor(private router: Router) { }
 
-  goProfile(page: string){
+  goProfile(){
     this.router.navigateByUrl("/profile")
-    this.page = page
   }
 
-  goCenter(page: string){
+  goCenter(){
     this.router.navigateByUrl("/home")
-    this.page = page
-  }
-
-  goPlan(page: string){
-    this.router.navigateByUrl("/home")
-    this.page = page
   }
 }

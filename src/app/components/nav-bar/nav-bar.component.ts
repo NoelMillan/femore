@@ -23,11 +23,11 @@ export class NavBarComponent implements OnInit {
   }
 
   goProfile(){
-    this.pageService.goProfile("Perfil");
+    this.pageService.goProfile();
   }
 
   goCenter(){
-    this.pageService.goCenter("Centros");
+    this.pageService.goCenter();
   }
 
 }

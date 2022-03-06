@@ -30,7 +30,7 @@ export class LoginPage implements OnInit {
   }
 
   goProfile(){
-    this.pageService.goProfile("Perfil")
+    this.pageService.goProfile()
   }
 
   goRegister(){

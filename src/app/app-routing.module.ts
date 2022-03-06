@@ -44,12 +44,19 @@ const routes: Routes = [
                             canActivate: [AuthGuard],
                             data: { authGuardPipe: redirectUnauthorizedToLogin }
   },
-
+  {
+    path: 'interactive-maps/:centerName',
+    loadChildren: () => import('./pages/interactive-maps/interactive-maps.module')
+                            .then( m => m.InteractiveMapsPageModule),
+                            canActivate: [AuthGuard],
+                            data: { authGuardPipe: redirectUnauthorizedToLogin }
+  },
   {
     path: '**',
     redirectTo: 'profile',
     pathMatch: 'full'
   },
+
 
 
 ];
