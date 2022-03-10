@@ -12,6 +12,9 @@ import { User } from 'src/app/models/user';
 })
 export class ProfileResetPage implements OnInit {
 
+  newPassword: string = ""
+  newPasswordRepeat: string = ""
+
   constructor(private pageService: PageService) {
     this.pageService.page = "Perfil"
   }
@@ -22,5 +25,20 @@ export class ProfileResetPage implements OnInit {
   goProfile(){
     this.pageService.goProfile()
   }
+  /*prueba(){
+    if(this.newPassword == this.newPasswordRepeat){
+      if(this.newPassword == null || this.newPassword == "" || this.newPasswordRepeat == null || this.newPasswordRepeat == ""){
+        console.log("no puedeshacer nada")
+      }
+      else{
+        if(this.newPassword == this.newPasswordRepeat){
+          console.log("ok")
+        }
+      }
+    }
+    else{
+      console.log("no son iguales")
+    }
+  }*/
 
 }
