@@ -27,7 +27,7 @@
       <span class="ion-padding-start letra-chica">I accept the <strong><a class="letra-register"><i>terms of use</i></a></strong></span>
     </ion-item>
     <div class="ion-text-center">
-      <button [disabled]="!termsChecked" type="submit" (click)="register()" class="caja-chica ion-text-center">
+      <button [disabled]="!termsChecked || isShowed" type="submit" (click)="register()" class="caja-chica ion-text-center">
         <h5 class="letra">Sign Up</h5>
       </button>
       <br>

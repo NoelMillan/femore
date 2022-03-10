@@ -13,7 +13,7 @@
       <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
     <div class="ion-text-center">
-      <button class="caja-chica ion-text-center" (click)="login()">
+      <button [disabled]="isShowed" class="caja-chica ion-text-center" (click)="login()">
         <h5 class="letra">Let me in</h5>
       </button>
     </div>

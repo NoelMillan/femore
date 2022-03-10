@@ -16,13 +16,21 @@ body{
     padding: .75rem;
   }
   .caja-chica{
-    margin: 30px auto 20px auto;
+    border: 1px solid #99999900;
+    margin: 30px auto 20px auto;  
     padding: .5rem;
     width: 120px;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
   }
+  .caja-chica:disabled{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    .letra{
+        color: #666666;
+    }
+}
   ion-item ion-label:nth-child(1){
     margin-left: 8px;
   }

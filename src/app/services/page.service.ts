@@ -1,3 +1,4 @@
+import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 
@@ -8,10 +9,10 @@ export class PageService {
 
   page: string;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   goProfile(){
-    this.router.navigateByUrl("/profile")
+    this.router.navigateByUrl(`/profile/${this.authService.getCurrentUser().uid}`)
   }
 
   goCenter(){

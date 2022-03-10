@@ -8,8 +8,12 @@ const redirectLoggedInToList = () => redirectLoggedInTo(['profile']);
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'landing',
     pathMatch: 'full'
+  },
+  {
+    path: 'landing',
+    loadChildren: () => import('./pages/landing/landing.module').then( m => m.LandingPageModule)
   },
   {
     path: 'login',
@@ -31,14 +35,14 @@ const routes: Routes = [
                             data: { authGuardPipe: redirectUnauthorizedToLogin }
   },
   {
-    path: 'profile',
+    path: 'profile/:id',
     loadChildren: () => import('./pages/profile/profile.module')
                             .then( m => m.ProfilePageModule),
                             canActivate: [AuthGuard],
                             data: { authGuardPipe: redirectUnauthorizedToLogin }
   },
   {
-    path: 'profile-reset',
+    path: 'profile-reset/:id',
     loadChildren: () => import('./pages/profile-reset/profile-reset.module')
                             .then( m => m.ProfileResetPageModule),
                             canActivate: [AuthGuard],
@@ -53,9 +57,10 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'profile',
+    redirectTo: 'landing',
     pathMatch: 'full'
   },
+
 
 
 

@@ -12,7 +12,7 @@ import { User } from 'src/app/models/user';
 })
 export class ProfileResetPage implements OnInit {
 
-  constructor(private router: Router, private pageService: PageService) {
+  constructor(private pageService: PageService) {
     this.pageService.page = "Perfil"
   }
 
@@ -20,7 +20,7 @@ export class ProfileResetPage implements OnInit {
   }
 
   goProfile(){
-    this.router.navigateByUrl("/profile")
+    this.pageService.goProfile()
   }
 
 }
