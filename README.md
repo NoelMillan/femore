@@ -5,20 +5,22 @@
 #
 ##### El usuario podrá elegir una localidad, y en dicha localidad aparecerán sus respectivos centros, todo a través de un diseño amigable para el usuario. Al pulsar en un centro se podrá ver su mapa interactivo junto a sus diferentes planos, ya sea de su piso superior, inferior, etc.
 #
-[Video](https://youtu.be/Hms9DmWJBOg)
+##### Los usuarios registrados se almacenan en la autenticación de Firebase, y como un usuario con sus propiedades correspondientes en el Firestore.
 #
 ---
-##### 7 Páginas
+##### 8 Páginas
 #
 ##### 2 Componentes
 #
-##### 3 Modelos
+##### 1 Modelo
 #
 ##### 3 Servicios
 ###
 ---
 #### Capturas de pantalla
 #
+### Landing Page
+![Imagen 0](https://cdn.discordapp.com/attachments/393868752086761475/919273649280782387/unknown.png)
 ### Login
 ![Imagen 1](https://cdn.discordapp.com/attachments/393868752086761475/919273649280782387/unknown.png)
 ### Registro
