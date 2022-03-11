@@ -20,7 +20,7 @@
 #### Capturas de pantalla
 #
 ### Landing Page
-![Imagen 0](https://cdn.discordapp.com/attachments/393868752086761475/919273649280782387/unknown.png)
+![Imagen 0](https://cdn.discordapp.com/attachments/759490803671367680/951828244016021535/unknown.png)
 ### Login
 ![Imagen 1](https://cdn.discordapp.com/attachments/393868752086761475/919273649280782387/unknown.png)
 ### Registro
