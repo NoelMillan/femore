@@ -5,26 +5,7 @@
       <div class="caja-mediana ion-text-center">
         <div class="caja-mediana__item">{{centerName}}</div>
       </div>
-      <ion-slides class="ion-margin-top">
-        <ion-slide>
-          <ion-card mode="ios">
-            <img src="../../../assets/images/map-center-1.png">
-            <span class="text-map ion-margin-start">Plano superior&nbsp;<ion-icon name="caret-forward-outline"></ion-icon></span>
-          </ion-card>
-        </ion-slide>
-        <ion-slide>
-          <ion-card mode="ios">
-            <img src="../../../assets/images/map-center-2.png">
-            <span class="text-map ion-margin-start">Plano inferior&nbsp;<ion-icon name="caret-forward-outline"></ion-icon></span>
-          </ion-card>
-        </ion-slide>
-        <ion-slide>
-          <ion-card mode="ios">
-            <img src="../../../assets/images/map-center-3.png">
-            <span class="text-map ion-margin-start">Parking&nbsp;<ion-icon name="caret-forward-outline"></ion-icon></span>
-          </ion-card>
-        </ion-slide>
-      </ion-slides>
+      <div #map id="map"></div>
     </div>
     <div class="ion-text-center">
       <div style="display: inline-flex;">

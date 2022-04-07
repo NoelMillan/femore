@@ -176,8 +176,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "app:build:production",
-            "firebaseProject": "femore-23dbd",
-            "firebaseHostingSite": "femore-23dbd"
+            "firebaseProject": "femore-proyecto",
+            "firebaseHostingSite": "femore-proyecto"
           }
         }
       }

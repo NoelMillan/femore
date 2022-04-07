@@ -6,9 +6,16 @@
           "femore-23dbd"
         ]
       }
+    },
+    "femore-proyecto": {
+      "hosting": {
+        "app": [
+          "femore-proyecto"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "femore-23dbd"
+    "default": "femore-proyecto"
   }
 }
