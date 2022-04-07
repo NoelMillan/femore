@@ -46,6 +46,6 @@
 # ---
 ![Imagen 12](https://cdn.discordapp.com/attachments/393868752086761475/961747778697039963/unknown.png)
 # Opciones menú
-![Imagen 14](https://cdn.discordapp.com/attachments/393868752086761475/919276162964918272/unknown.png)
+![Imagen 14](https://cdn.discordapp.com/attachments/393868752086761475/961748188681875486/unknown.png)
 # Sesión cerrada
 ![Imagen 15](https://cdn.discordapp.com/attachments/393868752086761475/919276196666150932/unknown.png)
