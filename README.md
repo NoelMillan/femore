@@ -42,12 +42,10 @@
 # ---
 ![Imagen 10](https://cdn.discordapp.com/attachments/393868752086761475/919275538235920434/unknown.png)
 ### Mapa Interactivo
-![Imagen 11](https://cdn.discordapp.com/attachments/393868752086761475/919276018127212675/unknown.png)
+![Imagen 11](https://cdn.discordapp.com/attachments/393868752086761475/961747685013078057/unknown.png)
 # ---
-![Imagen 12](https://cdn.discordapp.com/attachments/393868752086761475/919276055322324992/unknown.png)
-# ---
-![Imagen 13](https://cdn.discordapp.com/attachments/393868752086761475/919276091397513246/unknown.png)
+![Imagen 12](https://cdn.discordapp.com/attachments/393868752086761475/961747778697039963/unknown.png)
 # Opciones menú
-![Imagen 14](https://cdn.discordapp.com/attachments/393868752086761475/919276162964918272/unknown.png)
+![Imagen 14](https://cdn.discordapp.com/attachments/393868752086761475/961748188681875486/unknown.png)
 # Sesión cerrada
 ![Imagen 15](https://cdn.discordapp.com/attachments/393868752086761475/919276196666150932/unknown.png)
