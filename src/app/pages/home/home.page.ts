@@ -14,6 +14,8 @@ export class HomePage implements OnInit {
 
   centerPressed: boolean = false;
   locationPressed = "Málaga";
+  rate: any;
+  lastRate: any;
 
   option = {
     initialSlide: 1,

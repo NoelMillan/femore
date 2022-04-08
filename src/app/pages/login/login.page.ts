@@ -11,8 +11,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginPage implements OnInit {
 
-  email: string;
-  password: string;
+  email: string = "noel@gmail.com";
+  password: string = "123456";
   isShowed: boolean;
 
   constructor(public authService: AuthService, private router: Router, private pageService: PageService, private toastController: ToastController) { }
@@ -24,7 +24,7 @@ export class LoginPage implements OnInit {
     const connectionSuccess = await this.authService.login(this.email, this.password)
 
     if (connectionSuccess){
-      this.goProfile()
+      this.goHome()
       console.log("ok")
     } else{
       this.showMessage()
@@ -51,8 +51,8 @@ export class LoginPage implements OnInit {
         })
   }
 
-  goProfile(){
-    this.pageService.goProfile()
+  goHome(){
+    this.pageService.goCenter()
   }
 
   goRegister(){

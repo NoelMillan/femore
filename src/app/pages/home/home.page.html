@@ -24,10 +24,52 @@
     <div *ngIf="!centerPressed" class="container">
       <ion-slides [options]="option" class="ion-margin-top">
         <ion-slide *ngFor="let c of centersChanged">
-          <ion-card mode="ios" (click)="goPlan(c.name)">
-            <img src="{{c.img}}">
-            <p>{{c.name}}</p>
-          </ion-card>
+          <div class="container-slide">
+            <ion-card mode="ios" (click)="goPlan(c.name)">
+              <img src="{{c.img}}">
+              <p>{{c.name}}</p>
+            </ion-card>
+
+            <!-- Calificación de los centros -->
+            <div>
+              <span *ngIf="c.rate >= 1; else rate" class="center-rate" id="first-star"><ion-icon name="star"></ion-icon></span>
+              <span *ngIf="c.rate >= 2; else rate" class="center-rate" id="second-star"><ion-icon name="star"></ion-icon></span>
+              <span *ngIf="c.rate >= 3; else rate" class="center-rate" id="third-star"><ion-icon name="star"></ion-icon></span>
+              <span *ngIf="c.rate >= 4; else rate" class="center-rate" id="fourth-star"><ion-icon name="star"></ion-icon></span>
+              <span *ngIf="c.rate == 5; else rate" class="center-rate" id="fifth-star"><ion-icon name="star"></ion-icon></span>
+
+              <span #rate *ngIf="c.rate < 5 && c.rate >= 4.5; else lastRate" class="center-rate" id="fourth-star"><ion-icon name="star-half-outline"></ion-icon></span>
+
+              <span #lastRate *ngIf="c.rate < 4.5 && c.rate >= 4" #rate class="center-rate" id="fifth-star"><ion-icon name="star-outline"></ion-icon></span>
+
+              <ng-container *ngIf="c.rate < 4 && c.rate >= 3.5; else lastRate">
+                <span #rate class="center-rate" id="fourth-star"><ion-icon name="star-half-outline"></ion-icon></span>
+                <span #rate class="center-rate" id="fourth-star"><ion-icon name="star-outline"></ion-icon></span>
+              </ng-container>
+              <span #lastRate *ngIf="c.rate < 3.5 && c.rate >= 3" #rate class="center-rate" id="fourth-star"><ion-icon name="star-outline"></ion-icon></span>
+              <span #lastRate *ngIf="c.rate < 3.5 && c.rate >= 3" #rate class="center-rate" id="fifth-star"><ion-icon name="star-outline"></ion-icon></span>
+
+              <ng-container *ngIf="c.rate < 3 && c.rate >= 2.5">
+                <span #rate class="center-rate" id="third-star"><ion-icon name="star-half-outline"></ion-icon></span>
+                <span #rate class="center-rate" id="third-star"><ion-icon name="star-outline"></ion-icon></span>
+                <span #rate class="center-rate" id="third-star"><ion-icon name="star-outline"></ion-icon></span>
+              </ng-container>
+              <span #lastRate *ngIf="c.rate < 2.5 && c.rate >= 2" #rate class="center-rate" id="third-star"><ion-icon name="star-outline"></ion-icon></span>
+
+              <ng-container *ngIf="c.rate < 2 && c.rate >= 1.5" >
+                <span #rate class="center-rate" id="second-star"><ion-icon name="star-half-outline"></ion-icon></span>
+                <span #rate class="center-rate" id="second-star"><ion-icon name="star-outline"></ion-icon></span>
+                <span #rate class="center-rate" id="second-star"><ion-icon name="star-outline"></ion-icon></span>
+                <span #rate class="center-rate" id="second-star"><ion-icon name="star-outline"></ion-icon></span>
+              </ng-container>
+              <span #lastRate *ngIf="c.rate < 1.5 && c.rate >= 1" #rate class="center-rate" id="second-star"><ion-icon name="star-outline"></ion-icon></span>
+            </div>
+            <div>
+              <span class="rate-text"><b>{{c.rate}}</b> según reseñas de google</span>
+              <br>
+              <span class="info-button"><ion-icon name="information-circle-outline"></ion-icon></span>
+            </div>
+          </div>
         </ion-slide>
       </ion-slides>
     </div>
