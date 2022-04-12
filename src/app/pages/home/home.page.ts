@@ -4,6 +4,7 @@ import { PageService } from './../../services/page.service';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
+import { IonRouterOutlet } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,8 @@ export class HomePage implements OnInit {
   locationPressed = "Málaga";
   rate: any;
   lastRate: any;
+  openModal: boolean = false;
+  center: any;
 
   option = {
     initialSlide: 1,
@@ -35,7 +38,7 @@ export class HomePage implements OnInit {
 
   centersChanged = []
 
-  constructor(private pageService: PageService, private router: Router, private centerService: CenterService) {
+  constructor(private pageService: PageService, private router: Router, private centerService: CenterService, public routerOutlet: IonRouterOutlet) {
     this.locationChanged()
     this.pageService.page = "Centros"
     this.centers = this.centerService.centers
@@ -50,6 +53,12 @@ export class HomePage implements OnInit {
 
   goPlan(center: string){
     this.router.navigateByUrl(`/interactive-maps/${center}`)
+  }
+
+  showInfo(center: {}){
+    console.log(center);
+    this.center = center;
+    this.openModal = true;
   }
 
 }

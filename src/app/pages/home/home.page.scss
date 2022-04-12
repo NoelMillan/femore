@@ -210,6 +210,11 @@ ion-card p{
     position: relative;
     top: 10px;
     animation: float 2s infinite;
+    transition: .3s;
+}
+
+ion-content{
+    --ion-background-color: #ECE9E6;;
 }
 
 .container-slide{
@@ -243,7 +248,7 @@ ion-card p{
         top: 8px;
         opacity: 1;
         transition: .4s;
-        transition-delay: 1.2s;
+        transition-delay: 1s;
     }
     #second-star{
         transition-delay: .1s;
