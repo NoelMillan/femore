@@ -1,7 +1,7 @@
 import { CenterService } from './../../services/center.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PageService } from './../../services/page.service';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 declare var google: any;
 
@@ -74,7 +74,7 @@ export class InteractiveMapsPage{
     constructor(private pageService: PageService, private activatedRoute: ActivatedRoute, private router: Router, private centerService: CenterService) {
     this.pageService.page = "Planos"
     this.centerName = activatedRoute.snapshot.paramMap.get('centerName')
-    this.center = this.centerService.centers.find(center => this.centerName == center.name)
+    this.centerService.getCenters().subscribe(data => this.center = data.find(center => this.centerName == center.name))
   }
 
   ionViewDidEnter(){

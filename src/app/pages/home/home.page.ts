@@ -27,6 +27,11 @@ export class HomePage implements OnInit {
     loop: true,
   };
 
+  slideOpts = {
+    speed: 400,
+    loop: true
+  };
+
   locations = [
     {name: "Málaga"},
     {name: "Sevilla"},
@@ -34,21 +39,18 @@ export class HomePage implements OnInit {
     {name: "Almería"},
   ]
 
-  centers = []
-
   centersChanged = []
 
   constructor(private pageService: PageService, private router: Router, private centerService: CenterService, public routerOutlet: IonRouterOutlet) {
-    this.locationChanged()
     this.pageService.page = "Centros"
-    this.centers = this.centerService.centers
+    this.centerService.getCenters().subscribe(data => this.centersChanged = data)
+    this.locationChanged()
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   locationChanged(){
-    this.centersChanged = this.centerService.centers.filter(center => center.location === this.locationPressed);
+    this.centerService.getCenters().subscribe(data => this.centersChanged = data.filter(data => data.location === this.locationPressed))
   }
 
   goPlan(center: string){
