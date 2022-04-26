@@ -1,3 +1,4 @@
+import { ToastController } from '@ionic/angular';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PageService } from './../../services/page.service';
 import { Observable } from 'rxjs';
@@ -15,8 +16,11 @@ export class ProfilePage implements OnInit {
 
   users: Observable<User[]>;
   user: User[];
+  editable = true;
+  disabled = true;
+  usuario: User[];
 
-  constructor(private userService: UserService, public authService: AuthService, private pageService: PageService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private userService: UserService, public authService: AuthService, private toastController: ToastController, private pageService: PageService, private router: Router, private activatedRoute: ActivatedRoute) {
     this.pageService.page = "Perfil"
     if(this.activatedRoute.snapshot.paramMap.get('id') != this.authService.getCurrentUser().uid){
       this.router.navigateByUrl("/landing")
@@ -24,6 +28,9 @@ export class ProfilePage implements OnInit {
     else{
       this.userService.getUsers().subscribe(
         data => this.user = data.filter(data => data.email == this.authService.getCurrentUser().email)
+      );
+      this.userService.getUsers().subscribe(
+        data => this.usuario = data.filter(data => data.email == this.authService.getCurrentUser().email)
       );
     }
   }
@@ -33,6 +40,78 @@ export class ProfilePage implements OnInit {
 
   goReset(){
     this.router.navigateByUrl(`/profile-reset/${this.authService.getCurrentUser().uid}`)
+  }
+
+  inputChanges(){
+    if(JSON.stringify(this.user) === JSON.stringify(this.usuario)){
+      this.disabled = true
+    }
+    else{
+      this.disabled = false
+    }
+  }
+
+  async toastQ() {
+    const toast = await this.toastController.create({
+      message: 'You can edit your name now!',
+      duration: 1000,
+      mode: "ios",
+      cssClass: "app-toast"
+    });
+    toast.present();
+    await toast.onDidDismiss();
+    this.editable = !this.editable
+  }
+
+  async toastCancel() {
+    const toast = await this.toastController.create({
+      message: 'Changes cancelled',
+      duration: 1000,
+      mode: "ios",
+      cssClass: "app-toast"
+    });
+    toast.present();
+    await toast.onDidDismiss();
+    this.editable = !this.editable
+  }
+
+  async toastComplete() {
+    const toast = await this.toastController.create({
+      message: 'Changes were changed correctly',
+      duration: 1000,
+      mode: "ios",
+      cssClass: "app-toast"
+    });
+    toast.present();
+    await toast.onDidDismiss();
+    this.editable = !this.editable
+  }
+
+  showMessage() {
+    if(this.editable){
+      this.toastController.dismiss()
+      .finally(() => {
+        this.toastQ();
+      })
+    }
+    else{
+      this.toastController.dismiss()
+      .finally(() => {
+        this.toastCancel();
+      })
+    }
+  }
+
+  showCompleteMessage() {
+    this.toastController.dismiss()
+    .finally(() => {
+      this.toastComplete();
+    })
+  }
+
+  changeUser(user: User){
+    this.userService.updateUser(user)
+    .then(t => {this.editable = !this.editable; this.disabled = !this.disabled; this.showCompleteMessage()})
   }
 
 }

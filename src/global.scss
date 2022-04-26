@@ -33,3 +33,17 @@
 .swiper-pagination-bullet-active{
     background: #EC008C !important;
 }
+
+.sc-ion-input-md{
+    --padding-start: 0px;
+}
+
+.native-input[disabled].sc-ion-input-md{
+    opacity: 1;
+    color: black ;
+}
+
+.native-input[disabled].sc-ion-input-ios {
+    opacity: 1;
+    color: black ;
+}

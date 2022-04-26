@@ -1,6 +1,10 @@
 <ion-content>
   <body>
     <app-nav-bar></app-nav-bar>
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="showMessage()">
+      <ion-fab-button class="edit-icon" [activated]="!editable"><ion-icon name="create-outline"></ion-icon></ion-fab-button>
+      <ion-fab-list side="start"></ion-fab-list>
+      </ion-fab>
     <div class="container">
       <ng-container>
       <div class="container__item-up">
@@ -14,11 +18,11 @@
         </div>
       </div>
       <div class="container__item-down" *ngFor="let u of user">
-        <div class="item-down__inline">
+        <div class="item-down__inline" style="margin-top: 2%;">
           <div class="caja-chica">
             <h5 class="letra ion-text-center">Name</h5>
           </div>
-          <span><b>{{u.firstName}} {{u.lastName}}</b></span>
+          <div style="margin-left: 13px; margin-right: 20px; font-weight: bold; font-size: 14px;"><ion-input class="lol" [disabled]="editable" [(ngModel)]="u.firstName" (ngModelChange)="inputChanges()"></ion-input><ion-input [disabled]="editable" [(ngModel)]="u.lastName" (ngModelChange)="inputChanges()"></ion-input></div>
         </div>
         <div class="item-down__inline">
           <div class="caja-chica">
@@ -26,12 +30,13 @@
           </div>
           <span><b>{{u.email}}</b></span>
         </div>
-        <div class="item-down__inline">
+        <div class="item-down__inline" style="margin-top: 14%;">
           <div class="caja-chica">
             <h5 class="letra ion-text-center">Password</h5>
           </div>
           <span>***************<br><div id="pass" (click)="goReset()">Change your password</div></span>
         </div>
+        <div *ngIf="!disabled && !editable" style="margin: 20px auto;"><button class="button-box" (click)="changeUser(u)">Aplicar cambios</button></div>
       </div>
       </ng-container>
     </div>

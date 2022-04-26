@@ -82,7 +82,14 @@ ion-card{
 .swiper-slide{
     transition: .7s all ease-in-out;
 }
+.box-back{
+    display: inline-flex;
+    position: relative;
+    bottom: 7px;
+}
 .letra-sub{
     color: #F43379;
+    font-size: 26px;
+    margin-bottom: 4px;
     cursor: pointer;
 }

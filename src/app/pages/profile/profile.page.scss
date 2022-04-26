@@ -38,7 +38,7 @@ body{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 8%;
 }
 .item-down__inline span{
     padding-left: 15px;
@@ -52,4 +52,42 @@ body{
     font-size: 10px;
     color: #969696bd;
     cursor: pointer;
+}
+
+@keyframes float {
+    0%{
+        top: 0px;
+    } 50%{
+        top: 5px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+
+.edit-icon{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 23px;
+    color: white;
+    height: 50px;
+    width: 50px;
+    animation: float 2s infinite;
+}
+
+.button-box{
+    margin-top: 10px;
+    padding: 10px;
+    background: linear-gradient(90deg, #CC2B5E, #753A88);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.button-box:disabled{
+    border: 1px solid #999999;
+    background: #cccccc;
+    color: #666666;
+    transition: .3s;
 }

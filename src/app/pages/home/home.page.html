@@ -21,7 +21,7 @@
         </ng-container>
       </ion-segment>
     </div>
-    <div *ngIf="!centerPressed" class="container">
+    <div *ngIf="!centerPressed && centersChanged !== null" class="container">
       <ion-slides [options]="option" class="ion-margin-top">
         <ion-slide class="center-slide" *ngFor="let c of centersChanged">
           <div class="container-slide">
