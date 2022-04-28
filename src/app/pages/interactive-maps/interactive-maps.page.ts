@@ -110,7 +110,7 @@ export class InteractiveMapsPage{
   }
 
   goCenter(){
-    this.pageService.goCenter()
+    this.router.navigateByUrl("/home")
   }
 
   /*centerName: string;

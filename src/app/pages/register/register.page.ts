@@ -92,7 +92,6 @@ export class RegisterPage implements OnInit {
       firstName: this.firstName,
       lastName: this.lastName,
       email: this.email,
-      password: this.password,
       centersVisited: 0,
       reviews: 0,
     }

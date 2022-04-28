@@ -3,7 +3,7 @@ import { AuthGuard, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
-const redirectLoggedInToList = () => redirectLoggedInTo(['profile']);
+const redirectLoggedInToList = () => redirectLoggedInTo(['home']);
 
 const routes: Routes = [
   {
@@ -13,19 +13,31 @@ const routes: Routes = [
   },
   {
     path: 'landing',
-    loadChildren: () => import('./pages/landing/landing.module').then( m => m.LandingPageModule)
+    loadChildren: () => import('./pages/landing/landing.module')
+                            .then( m => m.LandingPageModule),
+                            canActivate: [AuthGuard],
+                            data: { authGuardPipe: redirectLoggedInToList }
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module')
+                            .then( m => m.LoginPageModule),
+                            canActivate: [AuthGuard],
+                            data: { authGuardPipe: redirectLoggedInToList }
   },
   {
     path: 'register',
-    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () => import('./pages/register/register.module')
+                            .then( m => m.RegisterPageModule),
+                            canActivate: [AuthGuard],
+                            data: { authGuardPipe: redirectLoggedInToList }
   },
   {
     path: 'recover',
-    loadChildren: () => import('./pages/recover/recover.module').then( m => m.RecoverPageModule)
+    loadChildren: () => import('./pages/recover/recover.module')
+                            .then( m => m.RecoverPageModule),
+                            canActivate: [AuthGuard],
+                            data: { authGuardPipe: redirectLoggedInToList }
   },
   {
     path: 'home',
