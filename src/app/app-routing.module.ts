@@ -20,10 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module')
-                            .then( m => m.LoginPageModule),
-                            canActivate: [AuthGuard],
-                            data: { authGuardPipe: redirectLoggedInToList }
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
   },
   {
     path: 'register',

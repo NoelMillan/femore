@@ -48,3 +48,14 @@
     opacity: 1;
     color: black ;
 }
+
+.footer-md::before {
+    left: 0;
+    top: 0;
+    bottom: auto;
+    background-position: left 0 top 0;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    content: "";
+}
