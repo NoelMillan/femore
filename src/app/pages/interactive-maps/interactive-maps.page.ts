@@ -78,7 +78,12 @@ export class InteractiveMapsPage{
   }
 
   ionViewDidEnter(){
-    this.showMap()
+    if(this.center){
+      this.showMap()
+    }
+    else{
+      this.pageService.goCenter()
+    }
   }
 
   showMap(){
@@ -104,8 +109,8 @@ export class InteractiveMapsPage{
     this.map = new google.maps.Map(this.mapRef.nativeElement, options)
   }
 
-  goProfile(){
-    this.router.navigateByUrl("/home")
+  goCenter(){
+    this.pageService.goCenter()
   }
 
   /*centerName: string;

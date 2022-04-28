@@ -24,6 +24,16 @@ body{
     font-size: 14px;
     color: #969696bd
 }
+.back-icon{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 23px;
+    color: white;
+    height: 50px;
+    width: 50px;
+    animation: float 2s infinite;
+}
 .caja-mediana{
     position: absolute;
     margin: -17px auto 0px auto;

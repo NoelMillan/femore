@@ -24,7 +24,6 @@ export class HomePage implements OnInit {
     initialSlide: 1,
     slidesPerView: 1.25,
     centeredSlides: true,
-    loop: true,
   };
 
   slideOpts = {

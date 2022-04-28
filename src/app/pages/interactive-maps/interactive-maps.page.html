@@ -1,16 +1,12 @@
 <ion-content>
   <body>
     <app-nav-bar></app-nav-bar>
+    <ion-fab-button class="back-icon" (click)="goCenter()"><ion-icon name="arrow-undo-outline"></ion-icon></ion-fab-button>
     <div class="container">
       <div class="caja-mediana ion-text-center">
         <div class="caja-mediana__item">{{centerName}}</div>
       </div>
       <div #map id="map"></div>
-    </div>
-    <div class="ion-text-center">
-      <div class="box-back">
-        <ion-icon name="caret-back-outline" class="letra-sub" (click)="goProfile()"></ion-icon>
-      </div>
     </div>
     <app-footer-bar></app-footer-bar>
   </body>
