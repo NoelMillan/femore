@@ -111,3 +111,13 @@ ion-item{
 .caja-media > .letra{
     color: white;
 }
+.back-icon{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 23px;
+    color: white;
+    height: 50px;
+    width: 50px;
+    animation: float 2s infinite;
+}

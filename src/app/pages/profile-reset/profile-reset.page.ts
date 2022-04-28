@@ -1,3 +1,4 @@
+import { ToastController } from '@ionic/angular';
 import { PageService } from './../../services/page.service';
 import { Router } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
@@ -15,30 +16,62 @@ export class ProfileResetPage implements OnInit {
   newPassword: string = ""
   newPasswordRepeat: string = ""
 
-  constructor(private pageService: PageService) {
+  constructor(private pageService: PageService, private authService: AuthService, private toastController: ToastController) {
     this.pageService.page = "Perfil"
   }
 
   ngOnInit() {
+    this.authService.getCurrentUser()
   }
 
   goProfile(){
     this.pageService.goProfile()
   }
-  /*prueba(){
+  prueba(){
     if(this.newPassword == this.newPasswordRepeat){
       if(this.newPassword == null || this.newPassword == "" || this.newPasswordRepeat == null || this.newPasswordRepeat == ""){
-        console.log("no puedeshacer nada")
+        this.toastController.dismiss()
+        .finally(() => {
+          this.toastError();
+        })
       }
       else{
         if(this.newPassword == this.newPasswordRepeat){
-          console.log("ok")
+          this.authService.ChangePassword(this.authService.getCurrentUser(), this.newPasswordRepeat)
+          this.pageService.goProfile()
+          this.newPassword = ""
+          this.newPasswordRepeat = ""
         }
       }
     }
     else{
-      console.log("no son iguales")
+      this.toastController.dismiss()
+      .finally(() => {
+        this.toastErrorMatch();
+      })
     }
-  }*/
+  }
+
+    async toastError() {
+      const toast = await this.toastController.create({
+        message: `All fields are required`,
+        duration: 1000,
+        mode: "ios",
+        cssClass: "app-toast"
+      });
+      toast.present();
+      await toast.onDidDismiss();
+    }
+  
+    async toastErrorMatch() {
+      const toast = await this.toastController.create({
+        message: `Passwords does not match`,
+        duration: 1000,
+        mode: "ios",
+        cssClass: "app-toast"
+      });
+      toast.present();
+      await toast.onDidDismiss();
+    }
 
 }
