@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "femore",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

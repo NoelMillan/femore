@@ -5,6 +5,7 @@ body{
 .container{
     display: flex;
     justify-content: center;
+    margin-top: -30px;
 }
 .container__item-up{
     display: flex;
@@ -15,6 +16,8 @@ body{
     color: #969696bd
 }
 .caja-mediana{
+    position: relative;
+    top: -15px;
     margin: auto;
     width: fit-content;
     background: linear-gradient(90deg, #CC2B5E, #753A88);

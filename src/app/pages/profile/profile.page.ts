@@ -17,6 +17,7 @@ export class ProfilePage implements OnInit {
   users: Observable<User[]>;
   user: User[];
   editable = true;
+  pressed = false;
   disabled = true;
   usuario: User[];
 
@@ -53,7 +54,7 @@ export class ProfilePage implements OnInit {
 
   async toastQ() {
     const toast = await this.toastController.create({
-      message: 'You can edit your name now!',
+      message: `You can edit your <b>name</b> now!`,
       duration: 1000,
       mode: "ios",
       cssClass: "app-toast"
@@ -88,7 +89,8 @@ export class ProfilePage implements OnInit {
   }
 
   showMessage() {
-    if(this.editable){
+    this.pressed = !this.pressed
+    if(this.editable && this.pressed){
       this.toastController.dismiss()
       .finally(() => {
         this.toastQ();

@@ -26,7 +26,7 @@
         <ion-slide class="center-slide" *ngFor="let c of centersChanged">
           <div class="container-slide">
             <ion-card mode="ios" (click)="goPlan(c.name)">
-              <img src="{{c.img}}">
+              <img style="pointer-events: none;" src="{{c.img}}">
               <p>{{c.name}}</p>
             </ion-card>
 
