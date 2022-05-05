@@ -303,3 +303,148 @@ ion-segment-button{
 .center-slide{
     height: 350px;
 }
+
+// DETAILS CENTER PAGE
+
+.details-title__box{
+    color: black;
+    width: 100%;
+    margin-bottom: 20px;
+    h4{
+        color: #dc0046;
+    }
+}
+.details-location__box{
+    display: flex;
+    #location_text{
+        position: relative;
+        top: 8px;
+        color: black;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+.bottom-line{
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.655);
+}
+.details-description__box{
+    color: #838C90;
+    width: 80%;
+    margin: 40px auto 20px auto;
+}
+.details-gallery__box{
+    margin-bottom: 35px;
+    .gallery-slides{
+        width: 90%;
+        border-radius: 5px;
+        height: 200px;
+        box-shadow: #ff6060 0px 0px 0px 2px, rgb(255 24 227 / 65%) 0px 4px 6px -1px, rgb(255 255 255 / 8%) 0px 1px 0px inset;
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@keyframes floatReview {
+    0%{
+        top: -37px;
+    } 50%{
+        top: -42px;
+    }
+    100%{
+        top: -37px;
+    }
+}
+.details-reviews__box{
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+    .details-reviews__titlebox{
+        margin-bottom: 15px;
+    }
+    .reviews-button{
+        --background: linear-gradient(45deg, #EC008C, #FC6767);
+    }
+    .reviews-slides{
+        transform: scale(1, 1);
+        flex-direction: column;
+        margin-bottom: 20px;
+        .reviews-title{
+            font-size: 17px;
+            margin: 12px;
+        }
+        .reviews-name{
+            color: #838C90;
+            font-size: 15px;
+        }
+    }
+}
+@keyframes floatCancel {
+    0%{
+        top: 3px;
+    } 50%{
+        top: 8px;
+    }
+    100%{
+        top: 3px;
+    }
+}
+.review-modal{
+    height: 50%;
+    top: 50%;
+    position: fixed;
+    border-radius: 20px 20px 0px 0px;
+    --backdrop-opacity: 0;
+    ion-content{
+        --ion-background-color: linear-gradient(45deg, #EC008C, #FC6767);
+        color: white;
+        .review-container{
+            width: 90%;
+            height: 90%;
+            margin: auto;
+            text-align: center;
+            background: white;
+            color: black;
+            border-radius: 13px;
+            .review-container__box{
+                width: 100%;
+                height: 100%;
+                margin-top: 15px;
+                .icon-box{
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    animation: floatCancel 2s infinite;
+                    ion-icon{
+                        font-size: 32px;
+                    }
+                }
+                .review-question__box{
+                    margin-top: 15px;
+                    span{
+                        font-weight: 600;
+                        color: #cc2b5e;
+                    }
+                    ion-input{
+                        border-bottom: 2px solid #cc2b5e;
+                        width: 80%;
+                        margin: 10px 10px auto 10px;
+                    }
+                    ion-input:first-child{
+                        flex-grow: 4;
+                    }
+                    ion-icon{
+                        color: #f1b400;
+                        font-size: 24px;
+                        position: relative;
+                        top: 5px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

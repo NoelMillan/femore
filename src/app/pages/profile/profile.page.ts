@@ -85,7 +85,7 @@ export class ProfilePage implements OnInit {
     });
     toast.present();
     await toast.onDidDismiss();
-    this.editable = !this.editable
+    this.pressed = !this.pressed
   }
 
   showMessage() {

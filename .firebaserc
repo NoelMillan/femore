@@ -13,9 +13,16 @@
           "femore-proyecto"
         ]
       }
+    },
+    "femore-f005a": {
+      "hosting": {
+        "app": [
+          "femore-f005a"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "femore-proyecto"
+    "default": "femore-f005a"
   }
 }

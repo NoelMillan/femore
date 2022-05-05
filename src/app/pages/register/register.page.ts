@@ -93,7 +93,7 @@ export class RegisterPage implements OnInit {
       lastName: this.lastName,
       email: this.email,
       centersVisited: 0,
-      reviews: 0,
+      reviews: [],
     }
     this.userService.addUser(user);
     }

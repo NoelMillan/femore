@@ -4,13 +4,14 @@
 
 export const environment = {
   firebase: {
-    projectId: 'femore-proyecto',
-    appId: '1:679066037980:web:0e45b40692e5dd7f3f8e19',
-    storageBucket: 'femore-proyecto.appspot.com',
+    projectId: 'femore-f005a',
+    appId: '1:857499741394:web:932008d5090231f977910b',
+    storageBucket: 'femore-f005a.appspot.com',
     locationId: 'europe-west',
-    apiKey: 'AIzaSyDDsBWr3qEdPMnGSYIgOapYlj03H-RZ9dw',
-    authDomain: 'femore-proyecto.firebaseapp.com',
-    messagingSenderId: '679066037980',
+    apiKey: 'AIzaSyCmB0DT2tOIFaHxExpsB2u0VTBRGqMk6eI',
+    authDomain: 'femore-f005a.firebaseapp.com',
+    messagingSenderId: '857499741394',
+    measurementId: 'G-N3WWY4G4DB',
   },
   production: false
 };

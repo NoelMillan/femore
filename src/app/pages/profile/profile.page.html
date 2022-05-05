@@ -6,18 +6,18 @@
       <ion-fab-list side="start"></ion-fab-list>
       </ion-fab>
     <div class="container">
-      <ng-container>
+      <ng-container *ngFor="let u of user">
       <div class="container__item-up">
         <div class="ion-text-center ion-padding-end">
           <h1>0</h1>
           <p class="disabled">Shopping centers visited</p>
         </div>
         <div class="ion-text-center ion-padding-start">
-          <h1>0</h1>
+          <h1>{{u.reviews.length}}</h1>
           <p class="disabled">Reviews</p>
         </div>
       </div>
-      <div class="container__item-down" *ngFor="let u of user">
+      <div class="container__item-down">
         <div class="item-down__inline" style="margin-top: 2%;">
           <div class="caja-chica">
             <h5 class="letra ion-text-center">Name</h5>

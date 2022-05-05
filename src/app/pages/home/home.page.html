@@ -78,53 +78,32 @@
         </ion-slide>
       </ion-slides>
     </div>
-      <!-- Rectángulo con vectores -->
-      <!-- <div class="footer__item"><img src="../../../assets/svg/barra-footer.svg"></div>
-      <div class="container-gap">
-        <div class="container-footer">
-          <div class="container-footer-gap">
-            <div class="container-footer__item">
-              <ion-icon name="man"></ion-icon>
-            </div>
-            <span>Male</span>
-          </div>
-          <div class="container-footer-gap">
-            <div class="container-footer__item segundo">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-            <span>10/07/21</span>
-          </div>
-          <div class="container-footer-gap">
-            <div class="container-footer__item">
-              <ion-icon name="call"></ion-icon>
-            </div>
-            <span>722651529</span>
-          </div>
-        </div>
-      </div> -->
       <app-footer-bar></app-footer-bar>
       <ion-modal mode="ios" [isOpen]="openModal" [swipeToClose]="true" [presentingElement]="routerOutlet.nativeEl" (didDismiss)="openModal = false">
         <ng-template>
           <ion-content style="user-select: none;">
-                <div class="ion-text-center" style="color: black; width: 100%; margin-bottom: 20px;">
-                  <h4 style="color: black;"><b>{{center.name}}</b></h4>
-                  <div style="display: flex;">
-                    <div style="width: 100%; border-bottom: 1px solid rgba(128, 128, 128, 0.655);"></div>
-                    <span style="position: relative; top: 8px; color: black; padding-left: 5px; padding-right: 5px;">{{center.location}}</span>
-                    <div style="width: 100%; border-bottom: 1px solid rgba(128, 128, 128, 0.655);"></div>
+                <div class="ion-text-center details-title__box">
+                  <h4><b>{{center.name}}</b></h4>
+                  <div class="details-location__box">
+                    <div class="bottom-line"></div>
+                    <span id="location_text">{{center.location}}</span>
+                    <div class="bottom-line"></div>
                   </div>
-                  <div style="color: #838C90; width: 80%; margin: 40px auto 20px auto; font-size: 17px;">{{center.description}}</div>
-                  <div style="margin-bottom: 20px;">
+                  <div class="details-description__box">{{center.description}}</div>
+                  <div class="details-gallery__box">
                     <h4>Galería</h4>
-                    <ion-slides pager="true" [options]="slideOpts" style="width: 90%; border-radius: 5px; height: 200px; box-shadow: #ff6060 0px 0px 0px 2px, rgb(255 24 227 / 65%) 0px 4px 6px -1px, rgb(255 255 255 / 8%) 0px 1px 0px inset;">
+                    <ion-slides class="gallery-slides" pager="true" [options]="slideOpts">
                       <ion-slide *ngFor="let c of center.gallery">
-                        <img style="object-fit: cover; height: 100%; width: 100%;" src="{{c.img}}">
+                        <img src="{{c.img}}">
                       </ion-slide>
                     </ion-slides>
                   </div>
-                  <div style="width: 90%; text-align: center; margin: auto;">
+                  <div class="details-reviews__box">
+                    <div class="details-reviews__titlebox">
+                      <h4>Reseñas</h4>
+                    </div>
                     <ion-slides [options]="slideOpts">
-                      <ion-slide *ngFor="let c of center.reviews" style="transform: scale(1, 1); flex-direction: column;">
+                      <ion-slide *ngFor="let c of center.reviews" class="reviews-slides">
                         <!-- REVIEWS -->
                         <div>
                           <span *ngIf="c.rate >= 1; else rate" class="center-rate" id="first-star"><ion-icon name="star"></ion-icon></span>
@@ -164,12 +143,35 @@
                           <span #lastRate *ngIf="c.rate < 1.5 && c.rate >= 1" #rate class="center-rate" id="second-star"><ion-icon name="star-outline"></ion-icon></span>
                           <span #lastRate *ngIf="c.rate < 1.5 && c.rate >= 1" #rate class="center-rate" id="second-star"><ion-icon name="star-outline"></ion-icon></span>
                         </div>
-                        <p style="font-size: 17px;">"{{c.review}}"</p>
-                        <span style="color: #838C90; font-size: 15px;">{{c.firstName}} {{c.lastName}}</span>
+                        <p class="reviews-title">"{{c.review}}"</p>
+                        <span class="reviews-name">{{c.firstName}} {{c.lastName}}</span>
                       </ion-slide>
                     </ion-slides>
+                    <ion-button class="reviews-button"  (click)="openReviewModal=true;">Comparte tu reseña</ion-button>
                   </div>
                 </div>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      <ion-modal mode="ios" class="review-modal" [isOpen]="openReviewModal && openModal" (didDismiss)="openReviewModal = false">
+        <ng-template>
+          <ion-content>
+            <div class="review-container">
+              <div class="review-container__box">
+                <div class="icon-box">
+                  <ion-icon (click)="openReviewModal=false" name="close-circle-outline"></ion-icon>
+                </div>
+                <div class="review-question__box">
+                  <span>¿Qué te ha parecido este centro comercial?</span>
+                  <div style="display: flex; align-items: center;">
+                  <ion-input [(ngModel)]="review" placeholder="Escribe tu reseña aquí"></ion-input>
+                  <ion-input placeholder="5.0" maxlength="3" [(ngModel)]="reviewRate" (ionChange)="strToNum()"></ion-input>
+                  <ion-icon name="star"></ion-icon>
+                  </div>
+                  <ng-container *ngFor="let u of user"><ion-button (click)="addReview(u, review, reviewRateNumber, center.name, center.centerId)">CONFIRMAR</ion-button></ng-container>
+                </div>
+              </div>
+            </div>
           </ion-content>
         </ng-template>
       </ion-modal>
