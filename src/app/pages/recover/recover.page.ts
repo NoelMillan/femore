@@ -20,7 +20,7 @@ export class RecoverPage implements OnInit {
 
   async toast() {
     const toast = await this.toastController.create({
-      message: 'We have sent you an email.',
+      message: 'Te hemos enviado un correo electrónico',
       duration: 1300,
       mode: "ios",
       cssClass: "app-toast"

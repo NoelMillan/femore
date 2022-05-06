@@ -54,7 +54,7 @@ export class ProfileResetPage implements OnInit {
 
     async toastError() {
       const toast = await this.toastController.create({
-        message: `All fields are required`,
+        message: `Todos los campos son necesarios`,
         duration: 1000,
         mode: "ios",
         cssClass: "app-toast"
@@ -65,7 +65,7 @@ export class ProfileResetPage implements OnInit {
   
     async toastErrorMatch() {
       const toast = await this.toastController.create({
-        message: `Passwords does not match`,
+        message: `Las contraseñas no coinciden`,
         duration: 1000,
         mode: "ios",
         cssClass: "app-toast"

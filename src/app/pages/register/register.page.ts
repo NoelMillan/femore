@@ -44,7 +44,7 @@ export class RegisterPage implements OnInit {
 
   async toast() {
     const toast = await this.toastController.create({
-      message: 'Email or password are incorrect, please try again',
+      message: 'Email o contraseña incorrectas, inténtelo de nuevo',
       duration: 1300,
       mode: "ios",
       cssClass: "app-toast"
@@ -56,7 +56,7 @@ export class RegisterPage implements OnInit {
 
   async toast2() {
     const toast = await this.toastController.create({
-      message: 'All fields are required, please try again',
+      message: 'Todos los campos son necesarios, inténtelo de nuevo',
       duration: 1300,
       mode: "ios",
       cssClass: "app-toast"

@@ -8,19 +8,15 @@
     <div class="container">
       <ng-container *ngFor="let u of user">
       <div class="container__item-up">
-        <div class="ion-text-center ion-padding-end">
-          <h1>0</h1>
-          <p class="disabled">Shopping centers visited</p>
-        </div>
         <div class="ion-text-center ion-padding-start">
           <h1>{{u.reviews.length}}</h1>
-          <p class="disabled">Reviews</p>
+          <p class="disabled">Reseñas</p>
         </div>
       </div>
       <div class="container__item-down">
         <div class="item-down__inline" style="margin-top: 2%;">
           <div class="caja-chica">
-            <h5 class="letra ion-text-center">Name</h5>
+            <h5 class="letra ion-text-center">Nombre</h5>
           </div>
           <div style="margin-left: 13px; margin-right: 20px; font-weight: bold; font-size: 14px;"><ion-input class="lol" [disabled]="!pressed" [(ngModel)]="u.firstName" (ngModelChange)="inputChanges()"></ion-input><ion-input [disabled]="!pressed" [(ngModel)]="u.lastName" (ngModelChange)="inputChanges()"></ion-input></div>
         </div>
@@ -32,9 +28,9 @@
         </div>
         <div class="item-down__inline" style="margin-top: 14%;">
           <div class="caja-chica">
-            <h5 class="letra ion-text-center">Password</h5>
+            <h5 class="letra ion-text-center">Contraseña</h5>
           </div>
-          <span>***************<br><div id="pass" (click)="goReset()">Change your password</div></span>
+          <span>***************<br><div id="pass" (click)="goReset()">Cambiar contraseña</div></span>
         </div>
         <div *ngIf="!disabled && pressed" style="margin: 20px auto; color: white;"><button class="button-box" (click)="changeUser(u)">Aplicar cambios</button></div>
       </div>

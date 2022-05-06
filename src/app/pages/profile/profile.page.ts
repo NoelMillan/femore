@@ -54,7 +54,7 @@ export class ProfilePage implements OnInit {
 
   async toastQ() {
     const toast = await this.toastController.create({
-      message: `You can edit your <b>name</b> now!`,
+      message: `Ahora puedes editar tu <b>nombre</b>`,
       duration: 1000,
       mode: "ios",
       cssClass: "app-toast"
@@ -66,7 +66,7 @@ export class ProfilePage implements OnInit {
 
   async toastCancel() {
     const toast = await this.toastController.create({
-      message: 'Changes cancelled',
+      message: 'Los cambios han sido cancelados',
       duration: 1000,
       mode: "ios",
       cssClass: "app-toast"
@@ -78,7 +78,7 @@ export class ProfilePage implements OnInit {
 
   async toastComplete() {
     const toast = await this.toastController.create({
-      message: 'Changes were changed correctly',
+      message: 'Los cambios se han realizado con éxito',
       duration: 1000,
       mode: "ios",
       cssClass: "app-toast"
