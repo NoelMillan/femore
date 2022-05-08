@@ -102,6 +102,7 @@
                     <div class="details-reviews__titlebox">
                       <h4>Reseñas</h4>
                     </div>
+                    <ng-container *ngIf="center.reviews; else notReviews">
                     <ion-slides [options]="slideOpts">
                       <ion-slide *ngFor="let c of center.reviews" class="reviews-slides">
                         <!-- REVIEWS -->
@@ -147,7 +148,9 @@
                         <span class="reviews-name">{{c.firstName}} {{c.lastName}}</span>
                       </ion-slide>
                     </ion-slides>
-                    <ion-button class="reviews-button"  (click)="openReviewModal=true;">Comparte tu reseña</ion-button>
+                    </ng-container>
+                    <ng-template #notReviews><div style="color: #838C90; margin: 15px;">No hay reseñas en este centro.<br><br>Anímate y <b>comparte</b> tu reseña con los demás.</div></ng-template>
+                    <ng-container *ngFor="let u of user"><ion-button class="reviews-button"  (click)="openReviewModal=true; check(u)"><b>Comparte tu reseña</b></ion-button></ng-container>
                   </div>
                 </div>
           </ion-content>
@@ -161,15 +164,27 @@
                 <div class="icon-box">
                   <ion-icon (click)="openReviewModal=false" name="close-circle-outline"></ion-icon>
                 </div>
-                <div class="review-question__box">
+                <div class="review-question__box" *ngIf="!exists; else notExists">
                   <span>¿Qué te ha parecido este centro comercial?</span>
-                  <div style="display: flex; align-items: center;">
-                  <ion-input [(ngModel)]="review" placeholder="Escribe tu reseña aquí"></ion-input>
-                  <ion-input placeholder="5.0" maxlength="3" [(ngModel)]="reviewRate" (ionChange)="strToNum()"></ion-input>
-                  <ion-icon name="star"></ion-icon>
+                  <div style="display: flex; align-items: center; margin: 10px;">
+                    <ion-input [(ngModel)]="review" placeholder="Escribe tu reseña aquí"></ion-input>
+                    <ion-input placeholder="5.0" maxlength="3" [(ngModel)]="reviewRate" (ionChange)="strToNum()"></ion-input>
+                    <ion-icon name="star"></ion-icon>
                   </div>
-                  <ng-container *ngFor="let u of user"><ion-button (click)="addReview(u, review, reviewRateNumber, center.name, center.centerId)">CONFIRMAR</ion-button></ng-container>
+                  <ng-container *ngFor="let u of user">
+                    <ion-button class="question-button" (click)="addReview(u, review, reviewRateNumber, center.name, center.centerId)">CONFIRMAR</ion-button>
+                  </ng-container>
                 </div>
+                <ng-template #notExists>
+                  <div class="review-question__box">
+                    <span style="color: gray;">Ya tienes una reseña hecha en este centro comercial</span>
+                    <div style="display: flex; align-items: center; margin: 10px;">
+                      <ion-input style="opacity: .7;" [(ngModel)]="review" [disabled]="true" placeholder="Escribe tu reseña aquí"></ion-input>
+                      <ion-input style="opacity: .7;" placeholder="5.0" maxlength="3" [disabled]="true" [(ngModel)]="reviewRate" (ionChange)="strToNum()"></ion-input>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </div>
+                </ng-template>
               </div>
             </div>
           </ion-content>

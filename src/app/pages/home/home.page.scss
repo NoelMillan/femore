@@ -443,6 +443,10 @@ ion-segment-button{
                         top: 5px;
                         margin-right: 10px;
                     }
+                    .question-button{
+                        --background: linear-gradient(45deg, #EC008C, #FC6767);
+                        margin-top: 20px;
+                    }
                 }
             }
         }

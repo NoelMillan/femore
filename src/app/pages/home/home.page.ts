@@ -24,6 +24,7 @@ export class HomePage implements OnInit {
   openModal: boolean = false;
   center: any;
   openReviewModal: boolean = false;
+  exists: boolean = false;
   review = ""
   reviewRate = ""
   reviewRateNumber: number;
@@ -75,10 +76,25 @@ export class HomePage implements OnInit {
     this.center = center;
     this.openModal = true;
   }
+
+  check(user: User){
+    if(user.reviews.map(data => data.center).filter(data => data == this.center.name).length!=0){
+      this.exists=true;
+      this.review=user.reviews.filter(data => data.center == this.center.name).map(data => data.review).toString()
+      this.reviewRate=user.reviews.filter(data => data.center == this.center.name).map(data => data.rate).toString()
+      console.log("existe")
+    }
+    else{
+      this.exists=false;
+      this.review=""
+      this.reviewRate=""
+      console.log("no existe")
+    }
+  }
   
   addReview(user: User, review: string, rate: number, center: string, centerId: string){
     let number = parseFloat(this.reviewRate)
-    if(isNaN(number)){
+    if(isNaN(number) || this.review=="" || this.reviewRate==""){
       this.showMessageErrorString()
       console.log("error1")
     }
@@ -114,7 +130,7 @@ export class HomePage implements OnInit {
 
   async toastErrorString() {
     const toast = await this.toastController.create({
-      message: 'Porfavor, introduzca correctamente la puntuación del centro',
+      message: 'Porfavor, introduzca correctamente los campos',
       duration: 1000,
       mode: "ios",
       cssClass: "app-toast"
