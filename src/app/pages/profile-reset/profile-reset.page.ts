@@ -38,7 +38,6 @@ export class ProfileResetPage implements OnInit {
       else{
         if(this.newPassword == this.newPasswordRepeat){
           this.authService.ChangePassword(this.authService.getCurrentUser(), this.newPasswordRepeat)
-          this.pageService.goProfile()
           this.newPassword = ""
           this.newPasswordRepeat = ""
         }

@@ -53,21 +53,14 @@ body{
 
 .item_box1 {
     display: inline-flex;
-    position: relative;
-    bottom: 50px;
 }
 
 .item_box2 {
     display: inline-flex;
-    position: relative;
-    /* right: -150px; */
-    bottom: 15px;
 }
 
 .item_box3 {
     display: inline-flex;
-    position: relative;
-    bottom: 50px;
 }
 
 .item-icon{
@@ -87,6 +80,19 @@ body{
 .container-footer ion-icon{
     display: initial;
     color: #FF440A;
+}
+
+.link-box{
+    text-decoration: none;
+    display: inline-flex;
+    position: relative;
+    bottom: 50px;
+}
+.link-box:nth-child(2){
+    text-decoration: none;
+    display: inline-flex;
+    position: relative;
+    bottom: 15px;
 }
 
 

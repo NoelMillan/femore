@@ -63,7 +63,7 @@ export class AuthService {
 
   async toastChangedPass() {
     const toast = await this.toastController.create({
-      message: `Your <b>password</b> has been changed`,
+      message: `Tu <b>contraseña</b> se ha cambiado correctamente`,
       duration: 1000,
       mode: "ios",
       cssClass: "app-toast"
@@ -74,7 +74,7 @@ export class AuthService {
 
   async toastErrorChangedPass() {
     const toast = await this.toastController.create({
-      message: `A problem has occurred`,
+      message: `Ha ocurrido un problema`,
       duration: 1000,
       mode: "ios",
       cssClass: "app-toast"
