@@ -15,6 +15,7 @@ export class InteractiveMapsPage{
   center: any;
   centerName: string;
   map: any;
+  loaded: boolean = true;
   mapStyle = [
     {
         "featureType": "all",
@@ -79,9 +80,11 @@ export class InteractiveMapsPage{
 
   ionViewDidEnter(){
     if(this.center){
+      this.loaded = false;
       this.showMap()
     }
     else{
+      this.loaded = true;
       this.pageService.goCenter()
     }
   }

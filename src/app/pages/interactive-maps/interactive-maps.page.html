@@ -6,7 +6,21 @@
       <div class="caja-mediana ion-text-center">
         <div class="caja-mediana__item">{{centerName}}</div>
       </div>
-      <div #map id="map"></div>
+      <div #map id="map">
+        <div class="spinner-box">
+          <div style="width: 25%;">
+            <svg viewBox="0 0 100 100">
+              <defs>
+                <filter id="shadow">
+                  <feDropShadow dx="0" dy="0" stdDeviation="1.5" 
+                    flood-color="#fc6767"/>
+                </filter>
+              </defs>
+              <circle id="spinner" style="fill:transparent;stroke:#ff6f6f;stroke-width: 3px;stroke-linecap: round;filter:url(#shadow);" cx="50" cy="50" r="45"/>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
     <app-footer-bar></app-footer-bar>
   </body>
