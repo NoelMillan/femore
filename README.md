@@ -1,7 +1,7 @@
 # **FEMORE**
 ##### Femore es una aplicación diseñada para dispositivos móviles que te permite ver los centros comerciales de cada locacalidad de España, así como sus respectivos mapas interactivos en los que podrás ver las diferentes tiendas y servicios de ocio.
 #
-##### En este proyecto he realizado la aplicación de móvil de Femore. El usuario puede registrarse y logearse,y una vez logeado, puede ver tanto su perfil como los centros que hay almacenados en la aplicación.
+##### En este proyecto he realizado la aplicación de móvil de Femore. El usuario podrá registrarse y logearse, y una vez logeado, podrá ver tanto su perfil como los centros que hay almacenados en la aplicación.
 #
 ##### El usuario podrá elegir una localidad, y en dicha localidad aparecerán sus respectivos centros, todo a través de un diseño amigable para el usuario. Al pulsar en un centro se podrá ver su mapa interactivo junto a sus diferentes planos, ya sea de su piso superior, inferior, etc.
 #
