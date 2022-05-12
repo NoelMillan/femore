@@ -11,8 +11,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginPage implements OnInit {
 
-  email: string = "noel@gmail.com";
-  password: string = "123456";
+  email: string = "";
+  password: string = "";
   isShowed: boolean;
 
   constructor(public authService: AuthService, private router: Router, private pageService: PageService, private toastController: ToastController) { }
