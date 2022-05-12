@@ -23,7 +23,7 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 * 4 Modelos
 * 4 Servicios
 
-### Video explicativo - [Femore](https://www.youtube.com/watch?v=ok79GiNpzxE)
+### Video explicativo - [Femore](https://www.youtube.com/watch?v=2JJ34R-AriQ)
 ### [APK - FEMORE](https://mega.nz/file/zHJnlZhQ#OQLmDwW5TtFh6rQ0OUD_Va70Sr46NFfn8R0S0VzfzTg)
 #
 <details>
