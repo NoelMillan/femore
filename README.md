@@ -24,6 +24,10 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 * 4 Servicios
 ### **Base de datos**
 ![Imagen](capturas/base-de-datos.png)
+### **Bibliografía**
+* [Stack Overflow](https://stackoverflow.com/)
+* [Firebase Documentación](https://firebase.google.com/docs)
+* [Ionic Documentación](https://ionicframework.com/docs)
 ### Video explicativo - [Femore](https://www.youtube.com/watch?v=2JJ34R-AriQ)
 #
 ### [APK - FEMORE](https://mega.nz/file/zHJnlZhQ#OQLmDwW5TtFh6rQ0OUD_Va70Sr46NFfn8R0S0VzfzTg)
