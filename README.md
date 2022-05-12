@@ -66,6 +66,7 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 ![Imagen 23](capturas/femore-ionic/23.png)
 
 </details>
+#
 <details>
  <summary><h2>Femore Admin - Angular</h2></summary>
  
