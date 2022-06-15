@@ -104,6 +104,7 @@ export class HomePage implements OnInit {
     }
     else{
       console.log("funciona")
+      this.openReviewModal = false;
       this.userService.addReview(user, review, rate, center, centerId).then(t => {this.showMessage(), this.review="", this.reviewRate=""})
     }
   }
