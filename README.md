@@ -77,7 +77,9 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 
 <details>
  <summary><h2>Femore Admin - Angular</h2></summary>
+  
 [Repositorio](https://github.com/NoelMillan/angular-project)
+  
 ### Inicio
 ![Imagen 0](capturas/femore-angular/1.png)
 # ---
