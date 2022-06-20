@@ -31,7 +31,7 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 #
 ### Video explicativo - [Femore](https://www.youtube.com/watch?v=2JJ34R-AriQ)
 #
-### [APK - FEMORE](https://mega.nz/file/zHJnlZhQ#OQLmDwW5TtFh6rQ0OUD_Va70Sr46NFfn8R0S0VzfzTg)
+### [APK - Femore](https://mega.nz/file/zHJnlZhQ#OQLmDwW5TtFh6rQ0OUD_Va70Sr46NFfn8R0S0VzfzTg)
 #
 ### [Landing Page](https://noelmillan.github.io/femore/landing-page/femore.html)
 #
@@ -78,7 +78,7 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 <details>
  <summary><h2>Femore Admin - Angular</h2></summary>
   
-[Repositorio](https://github.com/NoelMillan/angular-project)
+### [ir al repositorio](https://github.com/NoelMillan/angular-project)
   
 ### Inicio
 ![Imagen 0](capturas/femore-angular/1.png)
