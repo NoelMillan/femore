@@ -29,9 +29,6 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 * [Firebase documentación](https://firebase.google.com/docs)
 * [Ionic documentación](https://ionicframework.com/docs)
 #
-### Tareas por hacer
-* Hacer una parte del proyecto en android
-* Mejorar la base de datos
 ### Video explicativo - [Femore](https://www.youtube.com/watch?v=2JJ34R-AriQ)
 #
 ### [APK - FEMORE](https://mega.nz/file/zHJnlZhQ#OQLmDwW5TtFh6rQ0OUD_Va70Sr46NFfn8R0S0VzfzTg)
