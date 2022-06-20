@@ -6,4 +6,5 @@ export interface User {
     email: string;
     centersVisited: number;
     reviews: Review[];
+    isActive: boolean;
 }

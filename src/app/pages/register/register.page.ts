@@ -94,6 +94,7 @@ export class RegisterPage implements OnInit {
       email: this.email,
       centersVisited: 0,
       reviews: [],
+      isActive: true
     }
     this.userService.addUser(user);
     }
