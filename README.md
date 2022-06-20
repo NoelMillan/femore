@@ -36,6 +36,8 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 #
 ### [APK - FEMORE](https://mega.nz/file/zHJnlZhQ#OQLmDwW5TtFh6rQ0OUD_Va70Sr46NFfn8R0S0VzfzTg)
 #
+### [Landing Page](https://noelmillan.github.io/femore/landing-page/femore.html)
+#
 <details>
  <summary><h2>Femore - Ionic</h2></summary>
  
