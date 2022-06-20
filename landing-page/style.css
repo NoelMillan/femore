@@ -67,7 +67,7 @@ body{
 }
 .gallery-img1{
     box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
-    background-image:url("../landing-page/images/fondo3.jpg");
+    background-image:url("../images/fondo3.jpg");
     background-position: center;
     width: 100%;
     height: 500px;
@@ -84,7 +84,7 @@ body{
     margin: 10px;
     width: 100%;
     height: 200px;
-    background-image:url("../landing-page/images/fondo4.jpg");
+    background-image:url("../images/fondo4.jpg");
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -97,7 +97,7 @@ body{
     box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, #ff3f5f 0px 0px 0px 3px;
 }
 .gallery-img3{
-    background-image:url("../landing-page/images/fondo1.jpg");
+    background-image:url("../images/fondo1.jpg");
     box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
     margin-left: 10px;
     width: 100%;
@@ -110,7 +110,7 @@ body{
 }
 .gallery-img4{
     box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
-    background-image: url("../landing-page/images/fondo2.jpg");
+    background-image: url("../images/fondo2.jpg");
     height: 300px;
     width: 30%;
     position: relative;
@@ -131,7 +131,7 @@ body{
 
 .section-phrase{
     width: 100%;
-    background-image: url("../landing-page/images/fondo2.jpg");
+    background-image: url("../images/fondo2.jpg");
     margin: 0px auto 0px auto;
     position: relative;
     top: -135px;
