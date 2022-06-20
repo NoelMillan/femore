@@ -29,9 +29,9 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 * [Firebase documentación](https://firebase.google.com/docs)
 * [Ionic documentación](https://ionicframework.com/docs)
 #
-### Video explicativo - [Femore](https://www.youtube.com/watch?v=2JJ34R-AriQ)
+### [Video explicativo](https://www.youtube.com/watch?v=2JJ34R-AriQ)
 #
-### [APK - Femore](https://mega.nz/file/zHJnlZhQ#OQLmDwW5TtFh6rQ0OUD_Va70Sr46NFfn8R0S0VzfzTg)
+### [APK](https://mega.nz/file/zHJnlZhQ#OQLmDwW5TtFh6rQ0OUD_Va70Sr46NFfn8R0S0VzfzTg)
 #
 ### [Landing Page](https://noelmillan.github.io/femore/landing-page/femore.html)
 #
