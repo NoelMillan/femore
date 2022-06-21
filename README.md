@@ -31,7 +31,7 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 #
 ### [Video explicativo](https://www.youtube.com/watch?v=2JJ34R-AriQ)
 #
-### [APK](https://mega.nz/file/zHJnlZhQ#OQLmDwW5TtFh6rQ0OUD_Va70Sr46NFfn8R0S0VzfzTg)
+### [APK](https://mega.nz/file/rewxAQiA#OqU_0FzVeiYvE2gasBYLJ5kSRvWNZnP_y3EFlI1FWhA)
 #
 ### [Landing Page](https://noelmillan.github.io/femore/landing-page/femore.html)
 #
