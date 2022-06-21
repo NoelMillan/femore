@@ -96,7 +96,9 @@ export class RegisterPage implements OnInit {
       reviews: [],
       isActive: true
     }
-    this.userService.addUser(user);
+    this.userService.addUser(user).then(resp => {
+      this.authService.logout();
+    });
     }
 
 }
