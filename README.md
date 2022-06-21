@@ -29,12 +29,11 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 * [Firebase documentación](https://firebase.google.com/docs)
 * [Ionic documentación](https://ionicframework.com/docs)
 #
-### Tareas por hacer
-* Hacer una parte del proyecto en android
-* Mejorar la base de datos
-### Video explicativo - [Femore](https://www.youtube.com/watch?v=2JJ34R-AriQ)
+### [Video explicativo](https://www.youtube.com/watch?v=2JJ34R-AriQ)
 #
-### [APK - FEMORE](https://mega.nz/file/zHJnlZhQ#OQLmDwW5TtFh6rQ0OUD_Va70Sr46NFfn8R0S0VzfzTg)
+### [APK](https://mega.nz/file/zHJnlZhQ#OQLmDwW5TtFh6rQ0OUD_Va70Sr46NFfn8R0S0VzfzTg)
+#
+### [Landing Page](https://noelmillan.github.io/femore/landing-page/femore.html)
 #
 <details>
  <summary><h2>Femore - Ionic</h2></summary>
@@ -78,7 +77,9 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 
 <details>
  <summary><h2>Femore Admin - Angular</h2></summary>
- 
+  
+### [Ir al repositorio](https://github.com/NoelMillan/angular-project)
+  
 ### Inicio
 ![Imagen 0](capturas/femore-angular/1.png)
 # ---
