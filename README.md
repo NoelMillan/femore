@@ -35,6 +35,8 @@ El funcionamiento de las reseñas trata de: un usuario podrá escribir una rese�
 #
 ### [Landing Page](https://noelmillan.github.io/femore/landing-page/femore.html)
 #
+### [Explicación detallada - PDF](https://github.com/NoelMillan/femore/blob/main/Femore%20explicaci%C3%B3n%20detallada%20-%20Noel%20Mill%C3%A1n%20Rebollo.pdf)
+#
 <details>
  <summary><h2>Femore - Ionic</h2></summary>
  
