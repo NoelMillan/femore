@@ -13,7 +13,7 @@ Si el usuario **olvida** su contraseña, tendrá la opción de **recuperarla** m
 El funcionamiento de las reseñas trata de: un usuario podrá escribir una reseña en cualquier centro, pero ***NO*** podrá escribir más de 1 reseña en el mismo centro; esta reseña constará de una **descripción** en texto y una **puntuación**, que permitirá ***sólo*** valores de entre **1 y 5**, incluyéndo decimales.
 
 ### **Tecnologías utilizadas**
-* Ionic y Android
+* Ionic
 * Capacitor
 * Firebase, Cloud Firestore y Authentication
 * Google Cloud y Maps JavaScript API
